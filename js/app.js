@@ -1,11 +1,49 @@
 /*-------------------------------- Constants --------------------------------*/
-let A = 
-let B = 
-let C =
-let D =
-let E =
-let F =
+// let A;
+// let B;
+// let C;
+// let D;
+// let E;
+// let F;
+function init () {
 
+    const game = {
+    lives: 3,
+    player: 'Player Name',
+    stages: [
+        {
+            title: 'stage 1',
+            message: 'content',
+            graphic: 'image url',
+            playerOptions: [game.stages[1], game.stages[2]]
+        },
+        {
+            title: 'stage 2',
+            message: 'content',
+            graphic: 'image url',
+            playerOptions: [game.stages[2], game.stages[3]]
+        },
+        {
+            title: 'stage 3',
+            message: 'content',
+            graphic: 'image url',
+            playerOptions: [game.stages[3], game.stages[4]]
+        },
+        {
+            title: "stage 4",
+            message: "content",
+            graphic: "image url",
+            playerOptions: [game.stages[4], game.stages[5]]
+          },
+          {
+            title: "stage 5",
+            message: "content",
+            graphic: "image url",
+            playerOptions: [game.stages[5], game.stages[6]]
+          }
+    ]
+}
+}
 
 /*---------------------------- Variables (state) ----------------------------*/
 
@@ -21,18 +59,15 @@ const buttonFEl = document.querySelector('#F')
 
 const buttonELs = document.querySelector('#message')
 
-
+const messageEl = document.querySelector('#message')
 /*-------------------------------- Functions --------------------------------*/
-function init () {
-console.log('Hi!')
-}
 
 function render() {
     updateMessage()
 }
 
 function updateMessage() {
-    if ()
+    // if ()
 }
 
 function handleClick(event) {

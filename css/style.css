@@ -13,3 +13,8 @@ h2 {
     text-align: center;
     font-family: Luminari, fantasy;
 }
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 325px;
+  }
