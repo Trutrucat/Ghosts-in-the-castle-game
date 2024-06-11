@@ -12,12 +12,12 @@ let F =
 
 
 /*------------------------ Cached Element References ------------------------*/
-const buttonAEl = document.querySelector('.A')
-const buttonBEl = document.querySelector('.B')
-const buttonCEl = document.querySelector('.C')
-const buttonDEl = document.querySelector('.D')
-const buttonEEl = document.querySelector('.E')
-const buttonFEl = document.querySelector('.F')
+const buttonAEl = document.querySelector('#A')
+const buttonBEl = document.querySelector('#B')
+const buttonCEl = document.querySelector('#C')
+const buttonDEl = document.querySelector('#D')
+const buttonEEl = document.querySelector('#E')
+const buttonFEl = document.querySelector('#F')
 
 const buttonELs = document.querySelector('#message')
 
