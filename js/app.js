@@ -21,7 +21,9 @@ const buttonFEl = document.querySelector('.F')
 
 
 /*-------------------------------- Functions --------------------------------*/
-
+function init () {
+    
+}
 
 
 /*----------------------------- Event Listeners -----------------------------*/
