@@ -1,10 +1,10 @@
 /*-------------------------------- Constants --------------------------------*/
-// let A = 
-// let B = 
-// let C =
-// let D =
-// let E =
-// let F =
+let A = 
+let B = 
+let C =
+let D =
+let E =
+let F =
 
 
 /*---------------------------- Variables (state) ----------------------------*/
@@ -36,7 +36,7 @@ function updateMessage() {
 }
 
 function handleClick(event) {
-    
+
 }
 
 
