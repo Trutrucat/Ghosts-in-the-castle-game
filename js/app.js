@@ -6,15 +6,15 @@
 // let E;
 // let F;
 
-    const game = {
-    lives: 3,
+const game = {
     player: 'Player Name',
-    stages: ['stage 1', 'stage 2', 'stage 3', 'stage 4', 'stage 5', 'stage 6'],
-}
+    stages: ['stage' [0], 'stage' [1], 'stage' [2], 'stage'[3], 'stage' [4], 'stage'[5]],
+    currentStage: 0,
+};
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let userChoice = ''
+let userChoice = '';
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -46,20 +46,18 @@ function updateMessage() {
 }
 
 function handleClick(event) {
-
+    userChoice = event.target.id;
+    updateMessage();
 }}
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-buttonAEl.addEventListener('click', init)
-buttonBEl.addEventListener('click', init)
-buttonCEl.addEventListener('click', init)
-buttonDEl.addEventListener('click', init)
-buttonEEl.addEventListener('click', init)
-buttonFEl.addEventListener('click', init)
+// buttonAEl.addEventListener('click', init)
+// buttonBEl.addEventListener('click', init)
+// buttonCEl.addEventListener('click', init)
+// buttonDEl.addEventListener('click', init)
+// buttonEEl.addEventListener('click', init)
+// buttonFEl.addEventListener('click', init)
 
-buttonEls.forEach((button) => {
-    button.addEventListener('click', handleClick)
-});
 
 
