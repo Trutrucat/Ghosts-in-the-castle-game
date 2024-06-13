@@ -48,13 +48,14 @@ let userChoice = '';
 // const buttonEEl = document.querySelector('#E')
 // const buttonFEl = document.querySelector('#F')
 
-const buttonELs = document.querySelectorAll('#buttons')
+const buttonELs = document.querySelectorAll('#buttons button')
 
 const messageEl = document.querySelector('#message')
 
 const storyEl = document.querySelector('#story')
 /*-------------------------------- Functions --------------------------------*/
 function init () {
+    userChoice = 0;
     render();
     buttonELs.forEach((button) => {
         button.addEventListener('click', handleClick);
@@ -72,7 +73,9 @@ function updateMessage() {
 }
 
 function handleClick(event) {
-    userChoice = stages[userChoice].gotoOptions[event.target.stages.index]
+    const buttonText = event.target.textContent;
+    const currentIndex = stages[userChoice].btnNames.indexOf(buttonText);
+    userChoice = stages[userChoice].gotoOptions[currentIndex];
     render();
 }}
 init();
