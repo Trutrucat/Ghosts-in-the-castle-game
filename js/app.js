@@ -4,7 +4,7 @@ const stages = [
     {
         message: 'Welcome to Preston Castle, built in the late 1800s as a reform school for boys, now an abandoned and spooky place, home to restless spirits and entities. Where would you like to explore first? The old infirmary? Or the dormitory for the boys known as "Company B"?',
         btnNames: ['go to the infirmary', 'go to company B'],
-        gotoOptions: [0, 1]
+        gotoOptions: [1, 2]
     },
     {
         message: 'You step into the dark infirmary. There are several old hospital beds arranged in a row. An abandoned wheel chair sits next to one of the beds. You stop walking to listen. All is silent. Would you like to stay to see if anything happens? Or would you like to go upstairs to investigate the company B?',
@@ -19,7 +19,7 @@ const stages = [
     {
         message: 'You settle in on one of the beds, listening for any sounds. All is quiet. You strain your eyes in the darkness to catch sight of any movement. All is still. Suddenly you hear a sound coming from the floor directly above you. It sounds like footsteps in the dormitory but you know that you are alone in the castle. You decide to climb the stairs and go check out company B.',
         btnNames: ['stay in the infirmary', 'go upstairs to company B'],
-        gotoOption: [3, 4]
+        gotoOption: [1, 2]
     },
     {
         message: 'You take a deep breath and calm your shaky nerves as you shine your flashlight up into the rafters where you thought you saw something moving. All you can see is the old, worn graffiti from years ago where the boys climbed up to sign their names. You decide that you should further investigate with the equipment you brought along. Do you try to take a photo with your full-spectrum camera? Or do you go the low-tech route and set up a cat ball on the bed to see if any spirits want to touch it and light it up?',
