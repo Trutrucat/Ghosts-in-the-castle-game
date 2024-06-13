@@ -2,12 +2,12 @@
 
 const stages = [
     {
-        message: 'Welcome to Preston Castle, built in the late 1800s as a reform school for boys, now an abandoned and spooky place, home to restless spirits and entities. Where would you like to explore first? The old infirmary? Or the dormitory for the boys known as "Company B"?',
+        message: 'Welcome to Preston Castle, built in the late 1800s as a reform school for boys, now an abandoned and spooky place, home to restless spirits and entities. To win this game you need to make contact with a ghost! Where would you like to explore first? The old infirmary? Or the dormitory for the boys known as "Company B"?',
         btnNames: ['go to the infirmary', 'go to company B'],
         gotoOptions: [1, 2]
     },
     {
-        message: 'You step into the dark infirmary. There are several old hospital beds arranged in a row. An abandoned wheel chair sits next to one of the beds. You stop walking to listen. All is silent. Would you like to stay to see if anything happens? Or would you like to go upstairs to investigate the company B?',
+        message: 'You step into the dark infirmary. There are several old hospital beds arranged in a row. An abandoned wheel chair sits next to one of the beds. You stop walking to listen. All is silent. Would you like to stay to see if anything happens? Or would you like to go upstairs to investigate company B?',
         btnNames: ['stay in infirmary', 'go upstairs to company B'],
         gotoOptions: [3, 2]
     },
@@ -55,7 +55,7 @@ const buttonELs = document.querySelectorAll('#buttons button')
 
 const messageEl = document.querySelector('#message')
 
-const storyEl = document.querySelector('#story')
+//const storyEl = document.querySelector('#story')
 /*-------------------------------- Functions --------------------------------*/
 function init () {
     userChoice = 0;
@@ -66,11 +66,15 @@ function init () {
 )
 function render() {
     messageEl.textContent = stages[userChoice].message;
+    //update images source attribute after new question chosen for current question
     buttonELs.forEach((button, index) => {
+        //for every choice render one of the buttons to display text
+        
         button.textContent = stages[userChoice].btnNames[index];
     })
 }
-
+//console log variables inside handleClick before render
+//for conclusion hide buttons game ending message
 function updateMessage() {
     // if ()
 }

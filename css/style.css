@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(234, 22, 234);
+    background-color: rgb(244, 121, 244);
 }
 
 h1 {
@@ -17,4 +17,5 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     width: 325px;
+    justify-content: center;
   }
