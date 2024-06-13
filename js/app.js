@@ -1,38 +1,32 @@
 /*-------------------------------- Constants --------------------------------*/
-// let A;
-// let B;
-// let C;
-// let D;
-// let E;
-// let F;
 
 const stages = [
     {
-        message: 'Welcome to Preston Castle, built in the late 1800s as a reform school for boys, now an abandoned and spooky place, home to restless spirits and entities. Where would you like to explore first? The old infirmary? Or the dormitory for the boys known as "Company B"?'
-        btnNames: ['go to the infirmary', 'go to company B']
+        message: 'Welcome to Preston Castle, built in the late 1800s as a reform school for boys, now an abandoned and spooky place, home to restless spirits and entities. Where would you like to explore first? The old infirmary? Or the dormitory for the boys known as "Company B"?',
+        btnNames: ['go to the infirmary', 'go to company B'],
         gotoOptions: [0, 1]
     },
     {
-        message: 'You step into the dark infirmary. There are several old hospital beds arranged in a row. An abandoned wheel chair sits next to one of the beds. You stop walking to listen. All is silent. Would you like to stay to see if anything happens? Or would you like to go upstairs to investigate the company B?'
-        btnNames: ['stay in infirmary', 'go upstairs to company B']
+        message: 'You step into the dark infirmary. There are several old hospital beds arranged in a row. An abandoned wheel chair sits next to one of the beds. You stop walking to listen. All is silent. Would you like to stay to see if anything happens? Or would you like to go upstairs to investigate the company B?',
+        btnNames: ['stay in infirmary', 'go upstairs to company B'],
         gotoOptions: [0, 1]
     },
     {
-        message: 'You walk down a long hallway full of windows. You see rows of hooks on each side of the hallway. They are where the boys hung their daytime clothing and had to put on light colored nightshirts so that if they tried to escape in the night, they would be easily spotted by the guards. As you enter the doorway of the dormitory, you see one large room with beds. There is a tall vaulted ceiling with exposed rafters. A single stall toilet sits next to a desk and chair at the front of the room where the guard sat watch over the boys at night. Out of the corner of your eye you catch a slight moment high up in the rafters. Do you run away towards the infirmary? Or do you stay to investigate?'
-        btnNames: ['run to the infirmary', 'stat and investigate company B']
+        message: 'You walk down a long hallway full of windows. You see rows of hooks on each side of the hallway. They are where the boys hung their daytime clothing and had to put on light colored nightshirts so that if they tried to escape in the night, they would be easily spotted by the guards. As you enter the doorway of the dormitory, you see one large room with beds. There is a tall vaulted ceiling with exposed rafters. A single stall toilet sits next to a desk and chair at the front of the room where the guard sat watch over the boys at night. Out of the corner of your eye you catch a slight moment high up in the rafters. Do you run away towards the infirmary? Or do you stay to investigate?',
+        btnNames: ['run to the infirmary', 'stat and investigate company B'],
         gotoOptions: [0, 1]
     },
     {
-        message: 'You settle in on one of the beds, listening for any sounds. All is quiet. You strain your eyes in the darkness to catch sight of any movement. All is still. Suddenly you hear a sound coming from the floor directly above you. It sounds like footsteps in the dormitory but you know that you are alone in the castle. You decide to climb the stairs and go check out company B.'
-        btnNames: ['go upstairs to company B']
+        message: 'You settle in on one of the beds, listening for any sounds. All is quiet. You strain your eyes in the darkness to catch sight of any movement. All is still. Suddenly you hear a sound coming from the floor directly above you. It sounds like footsteps in the dormitory but you know that you are alone in the castle. You decide to climb the stairs and go check out company B.',
+        btnNames: ['go upstairs to company B'],
         gotoOption: 1,
     },
     {
-        message: 'You take a deep breath and calm your shaky nerves as you shine your flashlight up into the rafters where you thought you saw something moving. All you can see is the old, worn graffiti from years ago where the boys climbed up to sign their names. You decide that you should further investigate with the equipment you brought along. Do you try to take a photo with your full-spectrum camera? Or do you go the low-tech route and set up a cat ball on the bed to see if any spirits want to touch it and light it up?'
-        btnNames: ['high-tech camera', 'low-tech cat ball']
+        message: 'You take a deep breath and calm your shaky nerves as you shine your flashlight up into the rafters where you thought you saw something moving. All you can see is the old, worn graffiti from years ago where the boys climbed up to sign their names. You decide that you should further investigate with the equipment you brought along. Do you try to take a photo with your full-spectrum camera? Or do you go the low-tech route and set up a cat ball on the bed to see if any spirits want to touch it and light it up?',
+        btnNames: ['high-tech camera', 'low-tech cat ball'],
     },
     {
-        message: 'You take your full-spectrum camera from its case and attach the infrared light to it. You carefully aim it at the rafters where you thought you saw movement from the corner of your eye. You stare through the bright view screen and see nothing. You snap a few pictures just in case, but you have a feeling nothing will show up in the photos. Maybe you needed to choose the low tech option. You decide to try the cat ball instead.'
+        message: 'You take your full-spectrum camera from its case and attach the infrared light to it. You carefully aim it at the rafters where you thought you saw movement from the corner of your eye. You stare through the bright view screen and see nothing. You snap a few pictures just in case, but you have a feeling nothing will show up in the photos. Maybe you needed to choose the low tech option. You decide to try the cat ball instead.',
         btnNames: 'try the cat ball'
      },
      {
@@ -54,7 +48,7 @@ let userChoice = '';
 // const buttonEEl = document.querySelector('#E')
 // const buttonFEl = document.querySelector('#F')
 
-const buttonELs = document.querySelector('#buttons')
+const buttonELs = document.querySelectorAll('#buttons')
 
 const messageEl = document.querySelector('#message')
 
@@ -67,7 +61,10 @@ function init () {
     }
 )
 function render() {
-    
+    messageEl.textContent = stages[userChoice].message;
+    buttonELs.forEach((button, index) => {
+        button.textContent = stages[userChoice].btnNames[index];
+    })
 }
 
 function updateMessage() {
@@ -75,9 +72,10 @@ function updateMessage() {
 }
 
 function handleClick(event) {
-    userChoice = event.target.id;
-    updateMessage();
+    userChoice = stages[userChoice].gotoOptions[event.target.stages.index]
+    render();
 }}
+init();
 
 
 /*----------------------------- Event Listeners -----------------------------*/
