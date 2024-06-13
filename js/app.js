@@ -9,17 +9,17 @@ const stages = [
     {
         message: 'You step into the dark infirmary. There are several old hospital beds arranged in a row. An abandoned wheel chair sits next to one of the beds. You stop walking to listen. All is silent. Would you like to stay to see if anything happens? Or would you like to go upstairs to investigate the company B?',
         btnNames: ['stay in infirmary', 'go upstairs to company B'],
-        gotoOptions: [1, 2]
+        gotoOptions: [3, 2]
     },
     {
         message: 'You walk down a long hallway full of windows. You see rows of hooks on each side of the hallway. They are where the boys hung their daytime clothing and had to put on light colored nightshirts so that if they tried to escape in the night, they would be easily spotted by the guards. As you enter the doorway of the dormitory, you see one large room with beds. There is a tall vaulted ceiling with exposed rafters. A single stall toilet sits next to a desk and chair at the front of the room where the guard sat watch over the boys at night. Out of the corner of your eye you catch a slight moment high up in the rafters. Do you run away towards the infirmary? Or do you stay to investigate?',
         btnNames: ['run to the infirmary', 'stay and investigate company B'],
-        gotoOptions: [2, 3]
+        gotoOptions: [1, 4]
     },
     {
         message: 'You settle in on one of the beds, listening for any sounds. All is quiet. You strain your eyes in the darkness to catch sight of any movement. All is still. Suddenly you hear a sound coming from the floor directly above you. It sounds like footsteps in the dormitory but you know that you are alone in the castle. You decide to climb the stairs and go check out company B.',
-        btnNames: ['stay in the infirmary', 'go upstairs to company B'],
-        gotoOption: [1, 2]
+        btnName: ['go upstairs to company B'],
+        gotoOption: [2]
     },
     {
         message: 'You take a deep breath and calm your shaky nerves as you shine your flashlight up into the rafters where you thought you saw something moving. All you can see is the old, worn graffiti from years ago where the boys climbed up to sign their names. You decide that you should further investigate with the equipment you brought along. Do you try to take a photo with your full-spectrum camera? Or do you go the low-tech route and set up a cat ball on the bed to see if any spirits want to touch it and light it up?',
@@ -31,7 +31,7 @@ const stages = [
         btnNames: 'try the cat ball'
      },
      {
-        message: 'You decide to set up cat balls to see if there is anyone in the room with you. You place one carefully on each bed and call out to whatever spirits may be watching, “I am placing this ball that lights up with just the slightest moment on this bed. If you would like to make your presence known, feel free to show me you are here by lighting it up!”  You turn on your spirit box app on your phone to listen for any voices that may come through. Just as you are turning it on you hear a little voice giggle and say “hello!”. Suddenly the cat ball on the bed next to where you are standing lights up. You smile and say “Thank you for making your presence known!” The ball continues to light up. Congratulations! You are a winner! You just made your very first contact with the spirits of Preston Castle!'
+        message: 'You decide to set up cat ball to see if there is anyone in the room with you. You place one carefully on the bed and call out to whatever spirits may be watching, “I am placing this ball that lights up with just the slightest moment on this bed. If you would like to make your presence known, feel free to show me you are here by lighting it up!”  You turn on your spirit box app on your phone to listen for any voices that may come through. Just as you are turning it on you hear a little voice giggle and say “hello!”. Suddenly the cat ball on the bed next to where you are standing lights up. You smile and say “Thank you for making your presence known!” The ball continues to light up. Congratulations! You are a winner! You just made your very first contact with the spirits of Preston Castle!'
      }
 
 ]
