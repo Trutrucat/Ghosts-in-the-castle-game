@@ -28,7 +28,8 @@ const stages = [
     },
     {
         message: 'You take your full-spectrum camera from its case and attach the infrared light to it. You carefully aim it at the rafters where you thought you saw movement from the corner of your eye. You stare through the bright view screen and see nothing. You snap a few pictures just in case, but you have a feeling nothing will show up in the photos. Maybe you needed to choose the low tech option. You decide to try the cat ball instead.',
-        btnName: 'try the cat ball'
+        btnName: 'try the cat ball',
+        gotoOptions: [6]
         
      },
      {
@@ -40,7 +41,7 @@ const stages = [
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let userChoice = '';
+let userChoice = 0;
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -60,31 +61,28 @@ const messageEl = document.querySelector('#message')
 function init () {
     userChoice = 0;
     render();
-    buttonELs.forEach((button) => {
+    buttonELs.forEach((button, index) => {
+        //button.textContent = stages[0].btnNames[index];
         button.addEventListener('click', handleClick);
     }
 )
-function render() {
+function render(buttonText) {
     messageEl.textContent = stages[userChoice].message;
-    //update images source attribute after new question chosen for current question
     buttonELs.forEach((button, index) => {
-        //for every choice render one of the buttons to display text
-        
         button.textContent = stages[userChoice].btnNames[index];
-    })
+    
+    });
 }
 //console log variables inside handleClick before render
 //for conclusion hide buttons game ending message
-function updateMessage() {
-    // if ()
-}
 
 function handleClick(event) {
     const buttonText = event.target.textContent;
     const currentIndex = stages[userChoice].btnNames.indexOf(buttonText);
+    if (currentIndex != -1) {
     userChoice = stages[userChoice].gotoOptions[currentIndex];
-    render();
-}}
+    render(buttonText);
+}}}
 init();
 
 
