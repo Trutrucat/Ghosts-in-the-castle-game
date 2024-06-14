@@ -3,13 +3,14 @@ const stages = [
     {
         message: 'Welcome to Preston Castle, built in the late 1800s as a reform school for boys, now an abandoned and spooky place, home to restless spirits and entities. To win this game you need to make contact with a ghost! Where would you like to explore first? The old infirmary? Or the dormitory for the boys known as "Company B"?',
         btnNames: ['go to the infirmary', 'go to company B'],
-        gotoOptions: [1, 2]
+        gotoOptions: [1, 2],
+        imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Preston_Castle_1.jpg'
     },
     {
         message: 'You step into the dark infirmary. There are several old hospital beds arranged in a row. An abandoned wheel chair sits next to one of the beds. You stop walking to listen. All is silent. Would you like to stay to see if anything happens? Or would you like to go upstairs to investigate company B?',
         btnNames: ['stay in infirmary', 'go upstairs to company B'],
-        gotoOptions: [3, 2]
-        imgUrl: 'https://www.flickr.com/photos/whsieh78/49354827851'
+        gotoOptions: [3, 2],
+        imgUrl: 'https://cropper.watch.aetnd.com/cdn.watch.aetnd.com/sites/4/2017/07/lowe-cation-preston-castle-infirmary-1920x1080.jpg',
 
     },
     {
@@ -57,6 +58,8 @@ function init () {
 function render(buttonText) {
     console.log('Current stage:', stages[userChoice]);
     messageEl.textContent = stages[userChoice].message;
+    document.getElementById('stageImage1').src = stages[userChoice].imgUrl;
+    document.getElementById('stageImage2').src = stages[userChoice].imgUrl;
     if (stages[userChoice].btnNames.length === 1) {
         buttonELs[0].textContent =stages[userChoice].btnNames[0];
         buttonELs[1].style.display = 'none'
