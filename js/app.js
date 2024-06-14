@@ -54,40 +54,30 @@ const messageEl = document.querySelector('#message')
 
 function init () {
     userChoice = 0;
-    render();
+    
     buttonELs.forEach((button, index) => {
         button.addEventListener('click', handleClick);
-    }
-)
-function render(buttonText) {
+    });
+    render();
+}
+function render() {
     console.log('Current stage:', stages[userChoice]);
     messageEl.textContent = stages[userChoice].message;
-    for (let i = 0; i< buttonELs.length; i++) {
-        const imageId = 'stageImage' + (i + 1);
-        const stageIndex = userChoice + i;
-        if(stages[stageIndex]) {
-            document.getElementById(imageId).src = stages[stageIndex].imgUrl;
-        } else {
-            document.getElementById(imageId).style.display = 'none';
-        }
-    }
-    // document.getElementById('stageImage1').src = stages[userChoice].imgUrl;
-    // document.getElementById('stageImage2').src = stages[userChoice].imgUrl;
-    // document.getElementById('stageImage3').src = stages[userChoice].imgUrl;
-    // document.getElementById('stageImage4').src = stages[userChoice].imgUrl;
-    // document.getElementById('stageImage5').src = stages[userChoice].imgUrl;
-    // document.getElementById('stageImage6').src = stages[userChoice].imgUrl;
-    // document.getElementById('stageImage7').src = stages[userChoice].imgUrl;
-    if (stages[userChoice].btnNames.length === 1) {
-        buttonELs[0].textContent =stages[userChoice].btnNames[0];
-        buttonELs[1].style.display = 'none'
-    } else {
-        buttonELs.forEach((button, index) => {
-            button.textContent = stages[userChoice].btnNames[index];
-        
-        });
-    }   
-}
+    const imageElements = document.querySelectorAll('img');
+    imageElements.forEach(image => {
+        image.style.display = 'none';
+    });
+    const currentImageId = 'stageImage' + (userChoice + 1);
+    const currentImage = document.getElementById(currentImageId);
+    if(currentImage) {
+        currentImage.src = stages[userChoice].imgUrl;
+        currentImage.style.display = 'block';
+    }  
+    buttonELs.forEach((button, index) => {
+        button.textContent = stages[userChoice].btnNames[index];
+    });
+} 
+
 //for conclusion hide buttons game ending message
 
 function handleClick(event) {
@@ -97,10 +87,9 @@ function handleClick(event) {
     const currentIndex = stages[userChoice].btnNames.indexOf(buttonText);
     if (currentIndex != -1) {
     userChoice = stages[userChoice].gotoOptions[currentIndex];
-    render(buttonText);
-}}}
+    render();
+}}
 init();
-
 
 
 
