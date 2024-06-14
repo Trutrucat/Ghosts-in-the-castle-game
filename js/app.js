@@ -9,6 +9,8 @@ const stages = [
         message: 'You step into the dark infirmary. There are several old hospital beds arranged in a row. An abandoned wheel chair sits next to one of the beds. You stop walking to listen. All is silent. Would you like to stay to see if anything happens? Or would you like to go upstairs to investigate company B?',
         btnNames: ['stay in infirmary', 'go upstairs to company B'],
         gotoOptions: [3, 2]
+        imgUrl: 'https://www.flickr.com/photos/whsieh78/49354827851'
+
     },
     {
         message: 'You walk down a long hallway full of windows. You see rows of hooks on each side of the hallway. They are where the boys hung their daytime clothing and had to put on light colored nightshirts so that if they tried to escape in the night, they would be easily spotted by the guards. As you enter the doorway of the dormitory, you see one large room with beds. There is a tall vaulted ceiling with exposed rafters. A single stall toilet sits next to a desk and chair at the front of the room where the guard sat watch over the boys at night. Out of the corner of your eye you catch a slight moment high up in the rafters. Do you run away towards the infirmary? Or do you stay to investigate?',
