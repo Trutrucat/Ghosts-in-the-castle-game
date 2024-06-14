@@ -48,9 +48,10 @@ const stages = [
 
 let userChoice = 0;
 
-const buttonELs = document.querySelectorAll('#buttons button')
+const buttonELs = document.querySelectorAll('#buttons button');
+const resetButton = document.getElementById('resetButton');
 
-const messageEl = document.querySelector('#message')
+const messageEl = document.querySelector('#message');
 
 function init () {
     userChoice = 0;
@@ -58,6 +59,7 @@ function init () {
     buttonELs.forEach((button, index) => {
         button.addEventListener('click', handleClick);
     });
+    resetButton.addEventListener('click', handleReset);
     render();
 }
 function render() {
@@ -84,6 +86,10 @@ function handleClick(event) {
     userChoice = stages[userChoice].gotoOptions[currentIndex];
     render();
 }}
+function handleReset() {
+    userChoice = 0;
+    render();
+}
 init();
 
 
