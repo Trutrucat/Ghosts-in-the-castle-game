@@ -50,8 +50,9 @@ let userChoice = 0;
 
 const buttonELs = document.querySelectorAll('#buttons button');
 const resetButton = document.getElementById('resetButton');
-
 const messageEl = document.querySelector('#message');
+const winMessageEl = document.getElementById('winMessage');
+const lossMessageEl = document.getElementById('lossMessage');
 
 function init () {
     userChoice = 0;
@@ -77,6 +78,9 @@ function render() {
     buttonELs.forEach((button, index) => {
         button.textContent = stages[userChoice].btnNames[index];
     });
+
+    winMessageEl.style.display = 'none';
+    lossMessageEl.style.display = 'none';
 } 
 
 function handleClick(event) {
@@ -85,10 +89,38 @@ function handleClick(event) {
     if (currentIndex != -1) {
     userChoice = stages[userChoice].gotoOptions[currentIndex];
     render();
-}}
-function handleReset() {
+    if(userChoice === 6) {
+        showWinMessage();
+    } else if (userChoice === 5 && buttonText === 'high-tech camera') {
+        showLossMessage();
+    }
+    }
+ }
+ function handleReset() {
     userChoice = 0;
     render();
+    messageEl.style.display = 'block';
+    winMessageEl.style.display = 'none';
+    lossMessageEl.style.display = 'none';
+    buttonELs.forEach(button => {
+        button.style.display = 'inline-block';
+    });
+ }
+
+function showWinMessage() {
+    winMessageEl.style.display = 'block';
+    messageEl.style.display = 'none';
+    buttonELs.forEach(button => {
+        button.style.display = 'none';
+    });
+}
+
+function showLossMessage() {
+    lossMessageEl.style.display = 'block';
+    messageEl.style.display = 'none';
+    buttonELs.forEach(button => {
+        button.style.display = 'none';
+    })
 }
 init();
 
