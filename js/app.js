@@ -39,7 +39,7 @@ const stages = [
         
      },
      {
-        message: 'You decide to set up cat balls to see if there is anyone in the room with you. You place three carefully on each bed and call out to whatever spirits may be watching, “I am placing these cat balls on the beds. They light up with just the slightest movement. If you would like to make your presence known, feel free to show me you are here by lighting them up!” Just as you step back, you hear a little voice giggle in your ear. Suddenly the cat ball on the bed next to where you are standing lights up. You smile and say “Thank you for making your presence known!” The ball continues to light up. Congratulations! You are a winner! You just made your very first contact with the spirits of Preston Castle!',
+        message: 'You decide to set up cat balls to see if there is anyone in the room with you. You place three carefully on each bed and call out to whatever spirits may be watching, “I am placing these cat balls on the beds. They light up with just the slightest movement. If you would like to make your presence known, feel free to show me you are here by lighting them up!” Just as you step back, you hear a little voice giggle in your ear. Suddenly the cat ball on the bed next to where you are standing lights up. You smile and say “Thank you for making your presence known!” The ball continues to light up. You just made your very first contact with the spirits of Preston Castle!',
         btnNames: [],
         imgUrl: 'https://m.media-amazon.com/images/I/31yRAx8qM9L._AC_SY450_.jpg'
      },
