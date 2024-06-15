@@ -109,7 +109,8 @@ function handleClick(event) {
 
 function showWinMessage() {
     winMessageEl.style.display = 'block';
-    messageEl.style.display = 'none';
+    messageEl.style.display = 'block';
+    messageEl.textContent = stages[userChoice].message;
     buttonELs.forEach(button => {
         button.style.display = 'none';
     });
