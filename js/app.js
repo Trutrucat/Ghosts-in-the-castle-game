@@ -121,7 +121,7 @@ function showLossMessage() {
     messageEl.style.display = 'none';
     buttonELs.forEach(button => {
         button.style.display = 'none';
-    })
+    });
 }
 init();
 
